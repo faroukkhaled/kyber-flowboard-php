@@ -1,0 +1,79 @@
+{
+  "name": "KYBER Flowboard",
+  "category": "PROJECT DELIVERY",
+  "description": "A task workspace with dependency gates, cycle detection and per-assignee work-in-progress limits.",
+  "fields": [
+    {
+      "key": "title",
+      "label": "Task title",
+      "required": true
+    },
+    {
+      "key": "assignee",
+      "label": "Assignee",
+      "required": true
+    },
+    {
+      "key": "status",
+      "label": "Column",
+      "options": [
+        "Todo",
+        "Doing",
+        "Review",
+        "Done"
+      ]
+    },
+    {
+      "key": "estimate",
+      "label": "Estimate (hours)",
+      "type": "number",
+      "min": 0.25,
+      "max": 200,
+      "step": "0.25",
+      "required": true
+    },
+    {
+      "key": "blockedBy",
+      "label": "Depends on task ID (optional)"
+    },
+    {
+      "key": "notes",
+      "label": "Notes",
+      "type": "textarea",
+      "required": true
+    }
+  ],
+  "actions": [
+    {
+      "key": "advance",
+      "label": "Next column"
+    }
+  ],
+  "slug": "kyber-flowboard-php",
+  "demo": [
+    {
+      "title": "Demo discovery workshop",
+      "assignee": "Demo Lead",
+      "status": "Done",
+      "estimate": "4",
+      "blockedBy": "",
+      "notes": "Synthetic project planning."
+    },
+    {
+      "title": "Demo interface implementation",
+      "assignee": "Demo Developer",
+      "status": "Doing",
+      "estimate": "12",
+      "blockedBy": "",
+      "notes": "Synthetic task for the portfolio."
+    },
+    {
+      "title": "Demo acceptance checklist",
+      "assignee": "Demo QA",
+      "status": "Todo",
+      "estimate": "3",
+      "blockedBy": "",
+      "notes": "Synthetic verification task."
+    }
+  ]
+}

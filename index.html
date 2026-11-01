@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>KYBER Workspace</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <aside>
+      <div class="brand">K<span>YBER</span></div>
+      <p>BUSINESS WORKSPACE</p>
+      <nav>
+        <a href="#overview">Overview</a><a href="#records">Records</a
+        ><a href="#activity">Activity</a>
+      </nav>
+      <div class="aside-bottom">
+        LOCAL EDITION · v0.1<br />Built by Farouk Khaled
+      </div>
+    </aside>
+    <main>
+      <header>
+        <div>
+          <small id="eyebrow">OPERATIONS</small>
+          <h1 id="title">Loading workspace…</h1>
+          <p id="description"></p>
+        </div>
+        <div><span class="pill">Local workspace</span><p><button id="demo" class="secondary">Load synthetic demo</button></p></div>
+      </header>
+      <section id="overview" class="metrics"></section>
+      <div id="notice" role="status" aria-live="polite"></div>
+      <section class="split">
+        <article class="panel">
+          <h2 id="form-title">New record</h2>
+          <form id="record-form"></form>
+          <p class="hint">
+            Changes are stored locally. Use synthetic data for demonstrations.
+          </p>
+        </article>
+        <article class="panel" id="records">
+          <div class="toolbar">
+            <h2>Records</h2>
+            <input
+              id="search"
+              aria-label="Search records"
+              placeholder="Search…"
+            /><button id="export" class="secondary">Export CSV</button>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead id="columns"></thead>
+              <tbody id="rows"></tbody>
+            </table>
+          </div>
+          <p id="empty" class="hint"></p>
+        </article>
+      </section>
+      <section class="panel" id="activity">
+        <h2>Recent activity</h2>
+        <ul id="events"></ul>
+      </section>
+      <footer>
+        Portfolio release · single-user local application · no cloud services
+      </footer>
+    </main>
+    <script src="/app.js"></script>
+  </body>
+</html>
